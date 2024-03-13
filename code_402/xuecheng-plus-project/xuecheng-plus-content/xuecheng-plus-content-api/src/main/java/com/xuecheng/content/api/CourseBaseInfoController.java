@@ -47,7 +47,7 @@ public class CourseBaseInfoController {
     @PostMapping("/course")
     public CourseBaseInfoDto createCourseBase(@RequestBody @Validated(ValidationGroups.Inster.class) AddCourseDto addCourseDto){ // @RequestBody:将请求的json数据转为java对象 @Validated:激活校验,这里设置了分组校验
         // 获取用户所属的机构的id
-        // int i = 1/0; 测试异常
+//        int i = 1/0; //测试异常
         Long companyId = 1232141425L;
         CourseBaseInfoDto courseBase = courseBaseInfoService.createCourseBase(companyId, addCourseDto);
         return courseBase;
